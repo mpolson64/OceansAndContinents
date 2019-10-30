@@ -2,17 +2,22 @@ const path = require('path');
 
 module.exports = {
   mode: 'production',
-  // devtool: 'inline-source-map',
+  devtool: 'inline-source-map',
   devServer: {
     contentBase: './dist',
   },
-  entry: './src/index.js',
+  entry: './src/index.ts',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
       {
         test: /\.(csv|tsv)$/,
         use: [
@@ -27,5 +32,8 @@ module.exports = {
         ],
       },
     ],
+  },
+  resolve: {
+    extensions: ['.ts', '.js'],
   },
 };
