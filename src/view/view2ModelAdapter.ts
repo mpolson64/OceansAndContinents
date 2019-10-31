@@ -1,6 +1,6 @@
-import { FilterState } from "./filterstate";
+import { Predicates } from "./predicates";
 
 export interface View2ModelAdapter {
-    refilter: (filters: FilterState) => void;
+    refilter: (predicates: Predicates) => void;
     getData: () => object[];
 }

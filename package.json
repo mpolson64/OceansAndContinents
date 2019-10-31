@@ -33,6 +33,8 @@
   },
   "dependencies": {
     "@types/d3": "^5.7.2",
+    "@types/nouislider": "^9.0.5",
+    "@types/wnumb": "^1.0.28",
     "d3": "^5.12.0",
     "d3-tip": "^0.9.1",
     "datamaps": "^0.5.9",

@@ -17,9 +17,8 @@ export class Model {
         });
     }
 
-    filterData = (predicates: ((val: object) => boolean)[]) => {
-        const composed = predicates.reduce((composed, predicate) => item => composed(item) && predicate(item));
-        this.filteredData = this.data.filter(item => composed(item));
+    filterData = (predicate: (val: object) => boolean) => {
+        this.filteredData = this.data.filter(item => predicate(item));
 
         this.adapter.update(this.filteredData);
     }

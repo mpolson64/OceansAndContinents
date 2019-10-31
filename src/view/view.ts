@@ -1,16 +1,19 @@
 import { View2ModelAdapter } from "./view2ModelAdapter";
 import { Viz } from "./viz/viz";
-import { FilterState } from "./filterstate";
+import { Filters } from "./filters";
 import { Donut } from "./viz/donut";
 import { Histogram } from "./viz/histogram";
 import { Map } from "./viz/map";
 import { Table } from "./viz/table";
 
+import 'tabulator-tables/dist/css/tabulator.min.css';
+import 'nouislider/distribute/nouislider.min.css';
+
 export class View {
     vizualizerHeight = 600;
 
     adapter: View2ModelAdapter;
-    filters: FilterState;
+    filters: Filters;
     activeViz: Viz;
     donut: Donut;
     histogram: Histogram;
@@ -20,8 +23,8 @@ export class View {
     constructor(adapter: View2ModelAdapter) {
         this.adapter = adapter;
 
-        // TODO: construct filters
-        this.filters = {};
+        // bind filter/siders & set onchange
+        this.filters = new Filters(this.adapter);
 
         // construct vizs
         const vizDiv = document.getElementById('vizualizers');
@@ -33,7 +36,6 @@ export class View {
 
         this.activeViz = this.map;
 
-        // bind filter/siders onchange
         // bind w3bar onclicks
         // bind hidefilters
         // bind downloads

@@ -1,6 +1,6 @@
 import { Model } from "./model/model";
 import { View } from "./view/view";
-import { FilterState } from "./view/filterstate";
+import { Predicates } from "./view/predicates";
 
 const model = new Model('boc.csv', {
     update: (data: object[]) => {
@@ -10,8 +10,8 @@ const model = new Model('boc.csv', {
 });
 const view = new View({
     getData: () => model.data,
-    refilter: (filters: FilterState) => {
-        const predicates = [(x: object) => x == {}];
-        model.filterData(predicates);
+    refilter: (predicates: Predicates) => {
+        const composed = (<((record: any) => boolean)[]>Object.values(predicates)).reduce((composed, predicate) => item => composed(item) && predicate(item));
+        model.filterData(composed);
     },
 });
