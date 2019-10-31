@@ -27,6 +27,8 @@ export class Filters {
     ageSlider: noUiSlider.Instance;
     dateSlider: noUiSlider.Instance;
 
+    resetButton: HTMLButtonElement;
+
     predicates: Predicates;
 
     constructor(adapter: View2ModelAdapter) {
@@ -68,11 +70,11 @@ export class Filters {
         });
         this.dateSlider = document.getElementById('dateSlider') as noUiSlider.Instance;
         noUiSlider.create(this.dateSlider, {
-            start: [0, 100],
+            start: [1856, 1875],
             connect: true,
             range: {
-                min: 0,
-                max: 100,
+                min: 1856,
+                max: 1875,
             },
             tooltips: true,
             format: wNumb({
@@ -80,6 +82,8 @@ export class Filters {
             }),
             step: 1,
         });
+
+        this.resetButton = document.getElementById('resetFiltersButton') as HTMLButtonElement;
 
         /* eslint-disable */
         this.predicates = {
@@ -169,6 +173,39 @@ export class Filters {
             };
             adapter.refilter(this.predicates);
         });
+
+        this.resetButton.onclick = (): void => {
+            this.registreeFilter.value = '';
+            this.statusFilter.value = '';
+            this.sexFilter.value = '';
+            this.originFilter.value = '';
+            this.occupationFilter.value = '';
+            this.masterFilter.value = '';
+            this.masterResidenceFilter.value = '';
+            this.registrationDistrictFilter.value = '';
+            this.sourcesFilter.value = '';
+
+            this.ageSlider.noUiSlider.set([0, 100]);
+            this.dateSlider.noUiSlider.set([1856, 1875]);
+
+            /* eslint-disable */
+            this.predicates = {
+                registree: _x => true,
+                status: _x => true,
+                sex: _x => true,
+                origin: _x => true,
+                age: _x => true,
+                occupation: _x => true,
+                master: _x => true,
+                masterResidence: _x => true,
+                registrationDate: _x => true,
+                registrationDistrict: _x => true,
+                sources: _x => true,
+            };
+            /* eslint-enable */
+
+            adapter.refilter(this.predicates);
+        };
     }
     /* eslint-disable @typescript-eslint/no-explicit-any */
     fillDatalists = (data: any[]): void => {
@@ -193,5 +230,4 @@ export class Filters {
                 });
         });
     };
-    /* eslint-enable @typescript-eslint/no-explicit-any */
 }
