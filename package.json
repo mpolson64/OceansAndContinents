@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "prettier --write src/**/*.ts && eslint src/**/*.ts",
     "build": "webpack",
     "start": "webpack-dev-server --open"
   },
