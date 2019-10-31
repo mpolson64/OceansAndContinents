@@ -13,8 +13,20 @@ export class Filters {
     masterResidenceFilter: HTMLInputElement;
     registrationDistrictFilter: HTMLInputElement;
     sourcesFilter: HTMLInputElement;
+
+    registreeDatalist: HTMLDataListElement;
+    statusDatalist: HTMLDataListElement;
+    sexDatalist: HTMLDataListElement;
+    originDatalist: HTMLDataListElement;
+    occupationDatalist: HTMLDataListElement;
+    masterDatalist: HTMLDataListElement;
+    masterResidenceDatalist: HTMLDataListElement;
+    registrationDistrictDatalist: HTMLDataListElement;
+    sourcesDatalist: HTMLDataListElement;
+
     ageSlider: noUiSlider.Instance;
     dateSlider: noUiSlider.Instance;
+
     predicates: Predicates;
 
     constructor(adapter: View2ModelAdapter) {
@@ -27,6 +39,18 @@ export class Filters {
         this.masterResidenceFilter = document.getElementById('masterResidenceFilter') as HTMLInputElement;
         this.registrationDistrictFilter = document.getElementById('registrationDistrictFilter') as HTMLInputElement;
         this.sourcesFilter = document.getElementById('sourcesFilter') as HTMLInputElement;
+
+        this.registreeDatalist = document.getElementById('registreeDatalist') as HTMLDataListElement;
+        this.statusDatalist = document.getElementById('statusDatalist') as HTMLDataListElement;
+        this.sexDatalist = document.getElementById('sexDatalist') as HTMLDataListElement;
+        this.originDatalist = document.getElementById('originDatalist') as HTMLDataListElement;
+        this.occupationDatalist = document.getElementById('occupationDatalist') as HTMLDataListElement;
+        this.masterDatalist = document.getElementById('masterDatalist') as HTMLDataListElement;
+        this.masterResidenceDatalist = document.getElementById('masterResidenceDatalist') as HTMLDataListElement;
+        this.registrationDistrictDatalist = document.getElementById(
+            'registrationDistrictDatalist',
+        ) as HTMLDataListElement;
+        this.sourcesDatalist = document.getElementById('sourcesDatalist') as HTMLDataListElement;
 
         this.ageSlider = document.getElementById('ageSlider') as noUiSlider.Instance;
         noUiSlider.create(document.getElementById('ageSlider'), {
@@ -146,8 +170,28 @@ export class Filters {
             adapter.refilter(this.predicates);
         });
     }
-
-    fillDatalists = (data: object[]): void => {
-        console.log('filling datalists');
+    /* eslint-disable @typescript-eslint/no-explicit-any */
+    fillDatalists = (data: any[]): void => {
+        [
+            this.registreeDatalist,
+            this.statusDatalist,
+            this.sexDatalist,
+            this.originDatalist,
+            this.occupationDatalist,
+            this.masterDatalist,
+            this.masterResidenceDatalist,
+            this.registrationDistrictDatalist,
+            this.sourcesDatalist,
+        ].forEach(list => {
+            list.innerHTML = '';
+            Array.from(new Set(data.map(row => row[list.attributes[1].value]))) // data-key attribute
+                .sort()
+                .forEach(val => {
+                    const option = document.createElement('option');
+                    option.value = val;
+                    list.appendChild(option);
+                });
+        });
     };
+    /* eslint-enable @typescript-eslint/no-explicit-any */
 }
