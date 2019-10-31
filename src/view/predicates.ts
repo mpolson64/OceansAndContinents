@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export interface Predicates {
     registree: (record: any) => boolean;
     status: (record: any) => boolean;

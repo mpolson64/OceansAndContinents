@@ -1,3 +1,3 @@
 export interface Model2ViewAdapter {
-    update: (data: object) => void;
+    updateView: (data: object) => void;
 }

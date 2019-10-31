@@ -9,17 +9,17 @@ export class Model {
     constructor(filename: string, adapter: Model2ViewAdapter) {
         this.adapter = adapter;
 
-        d3.csv(filename).then((rawData: any) => {
+        d3.csv(filename).then(rawData => {
             this.data = rawData.slice(0);
             this.filteredData = this.data;
 
-            adapter.update(this.filteredData);
+            adapter.updateView(this.filteredData);
         });
     }
 
-    filterData = (predicate: (val: object) => boolean) => {
+    filterData = (predicate: (val: object) => boolean): void => {
         this.filteredData = this.data.filter(item => predicate(item));
 
-        this.adapter.update(this.filteredData);
-    }
+        this.adapter.updateView(this.filteredData);
+    };
 }
