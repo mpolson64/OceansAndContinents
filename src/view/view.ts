@@ -57,11 +57,113 @@ export class View {
         this.activeViz = this.map;
 
         // bind w3bar onclicks
+        const vizButtons = [
+            document.getElementById('tableButton'),
+            document.getElementById('donutButton'),
+            document.getElementById('histogramOverTimeButton'),
+            document.getElementById('mapButton'),
+        ];
+        vizButtons.forEach(button => {
+            button.onclick = (): void => {
+                Array.from(document.getElementsByClassName('viz')).forEach(elem => {
+                    (elem as HTMLElement).style.display = 'none';
+                });
+                Array.from(document.getElementsByClassName('w3-bar-item')).forEach(elem => {
+                    elem.className = 'w3-bar-item w3-button w3-light-gray';
+                });
+
+                document.getElementById(button.id.substring(0, button.id.length - 6)).style.display = 'block';
+                button.className = 'w3-bar-item w3-button w3-dark-gray';
+
+                const activeVizName = button.id.substring(0, button.id.length - 6);
+                if (activeVizName == 'table') {
+                    this.activeViz = this.table;
+                } else if (activeVizName == 'donut') {
+                    this.activeViz = this.donut;
+                } else if (activeVizName == 'histogramOverTime') {
+                    this.activeViz = this.histogram;
+                } else if (activeVizName == 'map') {
+                    this.activeViz = this.map;
+                }
+
+                this.updateActiveViz(data);
+            };
+        });
+
         // bind hidefilters
+        document.getElementById('toggleFilterButton').onclick = (): void => {
+            const filters = document.getElementById('filters');
+            const viz = document.getElementById('vizualizers');
+            const button = document.getElementById('toggleFilterButton');
+        
+            if (button.textContent === '>>') {
+                filters.style.width = '50%';
+                viz.style.width = '50%';
+        
+                button.textContent = '<<';
+        
+                // we need to do this halving and doubling because the transition makes the width
+                // not take effect instantly
+                this.donut = new Donut(
+                    data,
+                    document.getElementById('donutChart'),
+                    document.getElementById('dountSelect'),
+                    this.filters,
+                    this.vizualizerHeight,
+                    vizDiv.offsetWidth / 2 - 10,
+                );
+                this.histogram = new Histogram(
+                    data,
+                    document.getElementById('histogramOverTimeChart'),
+                    this.filters,
+                    this.vizualizerHeight,
+                    vizDiv.offsetWidth / 2 - 10,
+                );
+                this.map = new Map(
+                    data,
+                    document.getElementById('mapChart'),
+                    document.getElementById('mapSelect'),
+                    this.filters,
+                    this.vizualizerHeight,
+                    vizDiv.offsetWidth / 2 - 10,
+                );
+            } else {
+                filters.style.width = '0%';
+                viz.style.width = '100%';
+        
+                button.textContent = '>>';
+        
+                this.donut = new Donut(
+                    data,
+                    document.getElementById('donutChart'),
+                    document.getElementById('dountSelect'),
+                    this.filters,
+                    this.vizualizerHeight,
+                    vizDiv.offsetWidth * 2 - 10,
+                );
+                this.histogram = new Histogram(
+                    data,
+                    document.getElementById('histogramOverTimeChart'),
+                    this.filters,
+                    this.vizualizerHeight,
+                    vizDiv.offsetWidth * 2 - 10,
+                );
+                this.map = new Map(
+                    data,
+                    document.getElementById('mapChart'),
+                    document.getElementById('mapSelect'),
+                    this.filters,
+                    this.vizualizerHeight,
+                    vizDiv.offsetWidth * 2 - 10,
+                );
+            }
+        };
+
         // bind downloads
     }
 
     updateActiveViz = (data: object[]): void => this.activeViz.redraw(data);
+
     fillDatalists = (data: object[]): void => {
         this.filters.fillDatalists(data);
     };
