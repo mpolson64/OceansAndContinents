@@ -6,14 +6,17 @@ export class Model {
     data: object[];
     filteredData: object[];
 
-    constructor(filename: string, adapter: Model2ViewAdapter) {
+    constructor(filename: string, adapter: Model2ViewAdapter, callback: Function) {
         this.adapter = adapter;
 
         d3.csv(filename).then(rawData => {
             this.data = rawData.slice(0);
             this.filteredData = this.data;
 
+            callback();
+            
             adapter.updateView(this.filteredData);
+            console.log(this.data);
         });
     }
 

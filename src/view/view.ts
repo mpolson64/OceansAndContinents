@@ -22,13 +22,20 @@ export class View {
 
     constructor(adapter: View2ModelAdapter) {
         this.adapter = adapter;
+    }
+
+    start = () => {
+        console.log('starting view!');
 
         // bind filter/siders & set onchange
         this.filters = new Filters(this.adapter);
 
         // construct vizs
         const vizDiv = document.getElementById('vizualizers');
-        const data = adapter.getData();
+        // while (!adapter.getData()) console.log("loading data...");   // wait for data to load
+        const data = this.adapter.getData();
+        console.log("MILS");
+        console.log(data);
         this.donut = new Donut(
             data,
             document.getElementById('donutChart'),
@@ -160,7 +167,7 @@ export class View {
         };
 
         // bind downloads
-    }
+    };
 
     updateActiveViz = (data: object[]): void => this.activeViz.redraw(data);
 
