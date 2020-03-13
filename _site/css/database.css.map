@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "database.css",
+	"sources": [
+		"database.scss"
+	],
+	"sourcesContent": [
+		"#vizualizers {\n    background-color: White;\n}"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,YAAY,CAAC,EACT,gBAAgB,EAAE,KAAK,GAC1B"
+}
