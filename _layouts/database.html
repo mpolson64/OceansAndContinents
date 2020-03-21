@@ -3,7 +3,7 @@
 
 <head>
     {% include head.html %}
-    <link rel="stylesheet" href="/css/database.css">
+    <link rel="stylesheet" href="{{ '/assets/css/database.css' | relative_url }}">
 </head>
 
 <body>
@@ -185,7 +185,7 @@
     <a id="downloadRawBtn" href="src/boc.csv" download="OceansAndContinentsRaw.csv">Download
       raw dataset</a> | <a id="downloadFilteredBtn">Download filtered dataset</a> | <a id="downloadFilterStateBtn" download="OceansAndContinentsFilterState.json">Download filter state</a>
 
-    <script type="text/javascript" src="scripts/bundle.js"></script>
+    <script type="text/javascript" src="{{ '/assets/js/bundle.js' | relative_url }}"></script>
 
     {% include footer.html %}
 </body>

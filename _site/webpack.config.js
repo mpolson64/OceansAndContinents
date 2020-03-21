@@ -9,7 +9,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'scripts'),
+    path: path.resolve(__dirname, 'assets/js'),
   },
   module: {
     rules: [
