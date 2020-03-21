@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "splash.css",
+	"sources": [
+		"splash.scss",
+		"_sass/main.scss"
+	],
+	"sourcesContent": [
+		"@import \"main\";\n\n#splash_img {\n    width: 100%;\n}",
+		"$base-brown: #483400;\n\nh1 {\n    color: white;\n}\n\nh2 {\n    color: $base-brown;\n}"
+	],
+	"names": [],
+	"mappings": "ACEA,AAAA,EAAE,CAAC,EACC,KAAK,EAAE,KAAK,GACf;;AAED,AAAA,EAAE,CAAC,EACC,KAAK,EAPI,OAAO,GAQnB;;ADND,AAAA,WAAW,CAAC,EACR,KAAK,EAAE,IAAI,GACd"
+}
