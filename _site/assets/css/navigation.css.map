@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "navigation.css",
+	"sources": [
+		"navigation.scss",
+		"_sass/main.scss"
+	],
+	"sourcesContent": [
+		"@import \"main\";\n\n.navbar {\n    background-color: $base-brown;\n}\n\n",
+		"$base-brown: #483400;"
+	],
+	"names": [],
+	"mappings": "AAEA,AAAA,OAAO,CAAC,EACJ,gBAAgB,ECHP,OAAO,GDInB"
+}
