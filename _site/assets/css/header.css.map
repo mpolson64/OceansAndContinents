@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "header.css",
+	"sources": [
+		"header.scss",
+		"_sass/main.scss"
+	],
+	"sourcesContent": [
+		"@import \"main\";\n\n.jumbotron {\n    background-image: url(\"../images/jumbotron_bg.jpg\");\n    background-size: cover;\n}\n\n.mx-auto {\n    width: 1000px;\n}",
+		"$base-brown: #483400;\n\nh1 {\n    color: white;\n}\n\nh2 {\n    color: $base-brown;\n}"
+	],
+	"names": [],
+	"mappings": "ACEA,AAAA,EAAE,CAAC,EACC,KAAK,EAAE,KAAK,GACf;;AAED,AAAA,EAAE,CAAC,EACC,KAAK,EAPI,OAAO,GAQnB;;ADND,AAAA,UAAU,CAAC,EACP,gBAAgB,EAAE,iCAAiC,EACnD,eAAe,EAAE,KAAK,GACzB;;AAED,AAAA,QAAQ,CAAC,EACL,KAAK,EAAE,MAAM,GAChB"
+}

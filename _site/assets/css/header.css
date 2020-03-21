@@ -1,0 +1,9 @@
+h1 { color: white; }
+
+h2 { color: #483400; }
+
+.jumbotron { background-image: url("../images/jumbotron_bg.jpg"); background-size: cover; }
+
+.mx-auto { width: 1000px; }
+
+/*# sourceMappingURL=header.css.map */

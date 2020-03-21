@@ -7,8 +7,8 @@
 	],
 	"sourcesContent": [
 		"@import \"main\";\n\n.navbar {\n    background-color: $base-brown;\n}\n\n",
-		"$base-brown: #483400;"
+		"$base-brown: #483400;\n\nh1 {\n    color: white;\n}\n\nh2 {\n    color: $base-brown;\n}"
 	],
 	"names": [],
-	"mappings": "AAEA,AAAA,OAAO,CAAC,EACJ,gBAAgB,ECHP,OAAO,GDInB"
+	"mappings": "ACEA,AAAA,EAAE,CAAC,EACC,KAAK,EAAE,KAAK,GACf;;AAED,AAAA,EAAE,CAAC,EACC,KAAK,EAPI,OAAO,GAQnB;;ADND,AAAA,OAAO,CAAC,EACJ,gBAAgB,ECHP,OAAO,GDInB"
 }
