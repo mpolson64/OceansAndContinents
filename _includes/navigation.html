@@ -1,3 +1,6 @@
+{% assign active_class = "nav-item nav-link active" %}
+{% assign inactive_class = "nav-item nav-link" %}
+
 <link rel="stylesheet" href="{{ '/assets/css/navigation.css' | relative_url }}">
 
 <nav class="navbar navbar-expand-lg navbar-dark">
@@ -7,12 +10,12 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="/essays.html">Essays</a>
-      <a class="nav-item nav-link" href="/database.html">Database</a>
-      <a class="nav-item nav-link" href="/images.html">Images</a>
-      <a class="nav-item nav-link" href="/about.html">About</a>
-      <a class="nav-item nav-link" href="https://www.facebook.com/Between-Oceans-and-Continents-261710327832413/">
+      <a {% if page.title == "Oceans and Continents" %} class="{{active_class}}" {% else %} class="{{inactive_class}}" {% endif %} href="/">Home <span class="sr-only">(current)</span></a>
+      <a {% if page.title == "Database" %} class="{{active_class}}" {% else %} class="{{inactive_class}}" {% endif %} href="/database.html">Database</a>
+      <a {% if page.title == "Essays" %} class="{{active_class}}" {% else %} class="{{inactive_class}}" {% endif %} href="/essays.html">Essays</a>
+      <a {% if page.title == "Images" %} class="{{active_class}}" {% else %} class="{{inactive_class}}" {% endif %} href="/images.html">Images</a>
+      <a {% if page.title == "About" %} class="{{active_class}}" {% else %} class="{{inactive_class}}" {% endif %} href="/about.html">About</a>
+      <a class="{{inactive_class}}" href="https://www.facebook.com/Between-Oceans-and-Continents-261710327832413/">
         <i class="fab fa-facebook"></i>
       </a>
     </div>

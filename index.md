@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: Oceans and Continents - Know more about Mozambique
+title: Oceans and Continents
 ---
 
 ## Overview
