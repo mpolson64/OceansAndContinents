@@ -1,7 +1,2 @@
-sass:
-    load_paths:
-        - node_modules
-        - assets
-
 exclude:
     - "src/"
