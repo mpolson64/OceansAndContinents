@@ -12,3 +12,8 @@
 .vscode
 .eslintcache
 package-lock.json
+
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata

@@ -1,0 +1,23 @@
+{% assign inactive_class = "nav-item nav-link" %}
+{% assign active_class =  inactive_class | append: " active" %}
+
+<link rel="stylesheet" href="{{ '/assets/css/navigation.css' | relative_url }}">
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <a class="navbar-brand" href="#">Oceans and Continents</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a {% if page.title == "Oceans and Continents" %} class="{{active_class}}" {% else %} class="{{inactive_class}}" {% endif %} href="/">Home <span class="sr-only">(current)</span></a>
+      <a {% if page.title == "Database" %} class="{{active_class}}" {% else %} class="{{inactive_class}}" {% endif %} href="/database.html">Database</a>
+      <a {% if page.title == "Essays" %} class="{{active_class}}" {% else %} class="{{inactive_class}}" {% endif %} href="/essays.html">Essays</a>
+      <a {% if page.title == "Images" %} class="{{active_class}}" {% else %} class="{{inactive_class}}" {% endif %} href="/images.html">Images</a>
+      <a {% if page.title == "About" %} class="{{active_class}}" {% else %} class="{{inactive_class}}" {% endif %} href="/about.html">About</a>
+      <a class="{{inactive_class}}" href="https://www.facebook.com/Between-Oceans-and-Continents-261710327832413/">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </div>
+  </div>
+</nav>

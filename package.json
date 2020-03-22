@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "build-all": "webpack && jekyll build",
+    "start-all": "webpack && jekyll serve --open"
   },
   "repository": {
     "type": "git",
@@ -32,13 +34,16 @@
     "whybundled": "^1.4.2"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
+    "bootstrap": "^4.4.1",
     "d3": "^5.9.2",
     "d3-tip": "^0.9.1",
     "datamaps": "^0.5.9",
+    "font-awesome": "^4.7.0",
     "install": "^0.12.2",
     "js-yaml": "^3.13.1",
     "nouislider": "^13.1.3",
-    "npm": "^6.13.6",
+    "npm": "^6.14.2",
     "papaparse": "^4.5.0",
     "screenfull": "^5.0.1",
     "tabulator-tables": "^4.2.3",

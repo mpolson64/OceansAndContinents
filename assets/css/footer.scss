@@ -1,0 +1,17 @@
+---
+---
+@import "main";
+
+footer {
+    background-color: $base-brown;
+
+    img {
+        width: 20%;
+        padding: 10px;
+    }
+
+    p {
+        color: white;
+        margin-bottom: 0;
+    }
+}

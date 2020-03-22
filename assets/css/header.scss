@@ -1,0 +1,14 @@
+---
+---
+@import "main";
+
+header {
+    .jumbotron {
+        background-image: url("../images/jumbotron_bg.jpg");
+        background-size: cover;
+    }
+    
+    .mx-auto {
+        width: 1000px;
+    }
+}

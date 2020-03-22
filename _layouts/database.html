@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+
+<head>
+    {% include head.html %}
+    <link rel="stylesheet" href="{{ '/assets/css/database.css' | relative_url }}">
+</head>
+
+<body>
+    {% include navigation.html %}
+    {% include header.html %}
+
+    <div>
+        <div id='filters' style="width: 50%;overflow: scroll;transition: 0.5s;float: left;">
+            <h2 id='filtersHeader'>Filters</h2>
+            <form>
+                <table>
+                    <tr>
+                        <td>Registree</td>
+                        <td>
+                            <input list="registreeDatalist" id="registreeFilter">
+                            <datalist id="registreeDatalist" data-key="Registree"></datalist>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td>
+                            <input list="statusDatalist" id="statusFilter">
+                            <datalist id="statusDatalist" data-key="Status"></datalist>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sex</td>
+                        <td>
+                            <input list="sexDatalist" id="sexFilter">
+                            <datalist id="sexDatalist" data-key="Sex"></datalist>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Origin</td>
+                        <td>
+                            <input list="originDatalist" id="originFilter">
+                            <datalist id="originDatalist" data-key="Origin"></datalist>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Age</td>
+                        <td>
+                            <div class="noUiSlider" id="ageSlider"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Occupation</td>
+                        <td>
+                            <input list="occupationDatalist" id="occupationFilter">
+                            <datalist id="occupationDatalist" data-key="Occupation"></datalist>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Master</td>
+                        <td>
+                            <input list="masterDatalist" id="masterFilter">
+                            <datalist id="masterDatalist" data-key="Master"></datalist>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Master Residence</td>
+                        <td>
+                            <input list="masterResidenceDatalist" id="masterResidenceFilter">
+                            <datalist id="masterResidenceDatalist" data-key="Master Residence"></datalist>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Registration Date</td>
+                        <td>
+                            <div class="noUiSlider" id="dateSlider"></div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>Registration District</td>
+                        <td>
+                            <input list="registrationDistrictDatalist" id="registrationDistrictFilter">
+                            <datalist id="registrationDistrictDatalist" data-key="Registration District"></datalist>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sources</td>
+                        <td>
+                            <input list="sourcesDatalist" id="sourcesFilter">
+                            <datalist id="sourcesDatalist" data-key="Sources"></datalist>
+                        </td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+
+        <div id='vizualizers' style="width: 50%;
+      transition: 0.5s;
+      float: left;">
+            <div id='bar' class="w3-bar w3-light-gray" style="font-size: 12px">
+                <button id="toggleFilterButton" class="w3-bar-item w3-button"><i class="fa fa-caret-left"></i></button>
+
+                <button id="tableButton" class="w3-bar-item w3-button">Database</button>
+                <button id="donutButton" class="w3-bar-item w3-button">Donut</button>
+                <button id="histogramOverTimeButton" class="w3-bar-item w3-button">Histogram</button>
+                <button id="mapButton" class="w3-bar-item w3-button w3-dark-gray">Map</button>
+
+                <button id="fullscreenButton" class="w3-bar-item w3-button w3-right"><i class="fa fa-expand"></i></button>
+                <button id="resetFiltersButton" class="w3-bar-item w3-button w3-right"><i class="fa fa-undo"></i></button>
+                <button id="splitButton" class="w3-bar-item w3-button w3-right"><i class="fa fa-th-large"></i></button>
+            </div>
+
+            <div id='mouseover' class='mouseover'>
+                Hover over an element for details...
+            </div>
+
+            <div id="map" class="w3-container w3-animate-opacity viz">
+                <div style="padding-top: 10px; padding-bottom: 10px; width: 100%;">
+                    <select id='mapSelect'>
+                        <option value='Registration District'>Registration District</option>
+                        <option value='Origin'>Origin</option>
+                        <option value='Both'>Both</option>
+                    </select>
+                </div>
+                <div id="mapChart"></div>
+            </div>
+
+            <div id="donut" class="w3-container w3-animate-opacity viz" style="display:none">
+                <div style="padding-top: 10px; padding-bottom: 10px; width: 100%;">
+                    <select id='donutSelect' style="padding: 10px; widows: 100%;">
+                        <option value='Status'>Status</option>
+                        <option value='Sex'>Sex</option>
+                        <option value='Origin'>Origin</option>
+                        <option value='Occupation'>Occupation</option>
+                        <option value='Master'>Master</option>
+                        <option value='Master Residence'>Master Residence</option>
+                        <option value='Registration District'>Registration District</option>
+                    </select>
+                </div>
+                <div id="donutChart"></div>
+            </div>
+
+            <div id="histogramOverTime" class="w3-container w3-animate-opacity viz" style="display:none">
+                <div id="histogramOverTimeChart"></div>
+            </div>
+
+            <div id="table" class="w3-container w3-animate-opacity viz table" style="display:none">
+                <div id="tableChart"></div>
+            </div>
+            <div id="split" class="w3-container w3-animate-opacity viz table" style="display:none">
+                <div id="splitChart" style="display: flex; flex-flow: row wrap;">
+                    <div id="splitMap">
+                        <div style="padding-top: 10px; padding-bottom: 10px; width: 100%;">
+                            <select id='splitMapSelect'>
+                                <option value='Registration District'>Registration District</option>
+                                <option value='Origin'>Origin</option>
+                                <option value='Both'>Both</option>
+                            </select>
+                        </div>
+                        <div id="splitMapChart"></div>
+                    </div>
+                    <div id="splitDonut">
+                        <div style="padding-top: 10px; padding-bottom: 10px; width: 100%;">
+                            <select id='splitDonutSelect'>
+                                <option value='Status'>Status</option>
+                                <option value='Sex'>Sex</option>
+                                <option value='Origin'>Origin</option>
+                                <option value='Occupation'>Occupation</option>
+                                <option value='Master'>Master</option>
+                                <option value='Master Residence'>Master Residence</option>
+                                <option value='Registration District'>Registration District</option>
+                            </select>
+                        </div>
+                        <div id="splitDonutChart"></div>
+                    </div>
+                    <div id="splitHistogramOverTimeChart"></div>
+                    <div id="splitTableChart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a id="downloadRawBtn" href="src/boc.csv" download="OceansAndContinentsRaw.csv">Download
+      raw dataset</a> | <a id="downloadFilteredBtn">Download filtered dataset</a> | <a id="downloadFilterStateBtn" download="OceansAndContinentsFilterState.json">Download filter state</a>
+
+    <script type="text/javascript" src="{{ '/assets/js/bundle.js' | relative_url }}"></script>
+
+    {% include footer.html %}
+</body>
+
+</html>

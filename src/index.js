@@ -400,8 +400,7 @@ if (isSafari) {
 }
 
 // load data
-// d3.csv('boc.csv').then((rawData) => {
-d3.csv('../wp-content/uploads/2019/05/boc.csv').then((rawData) => {
+d3.csv('assets/js/boc.csv').then((rawData) => {
   data = rawData.slice(0);
   filteredData = rawData.slice(0);
 
