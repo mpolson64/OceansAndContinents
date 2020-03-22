@@ -12,6 +12,7 @@
 .vscode
 .eslintcache
 package-lock.json
+stats.json
 
 _site/
 .sass-cache/
