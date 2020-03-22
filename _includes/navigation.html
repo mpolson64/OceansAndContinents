@@ -1,9 +1,9 @@
-{% assign active_class = "nav-item nav-link active" %}
 {% assign inactive_class = "nav-item nav-link" %}
+{% assign active_class =  inactive_class | append: " active" %}
 
 <link rel="stylesheet" href="{{ '/assets/css/navigation.css' | relative_url }}">
 
-<nav class="navbar navbar-expand-lg navbar-dark">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
   <a class="navbar-brand" href="#">Oceans and Continents</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
