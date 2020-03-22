@@ -2,8 +2,23 @@
 ---
 @import "main";
 
-.splash {
+.splash_header {
     img {
         width: 100%;
+        padding-bottom: 50px;
     }
+}
+
+.big-icon {
+    font-size: 200px;
+}
+
+.splash_nav_item {
+    color: inherit;
+    text-decoration: none;
+}
+
+.splash_nav_item:hover {
+    color: inherit;
+    text-decoration: none;
 }

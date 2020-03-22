@@ -7,12 +7,48 @@
   <body>
     {% include navigation.html %}
     
-    <div class="splash">
+    <div class="splash_header">
       <img src="assets/images/splash_img.jpg"></img>
     </div>
 
     <div class="container">
       {{ content }}
+    </div>
+
+    <div class="spash_nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-md text-center">
+            <a class="splash_nav_item" href="{{ '/database.html' | relative_url }}">
+              <span class="big-icon">
+                <i class="fas fa-database"></i>
+              </span>
+              <h2>Database</h2>
+              <p>Examine the database of slave and freed Africans.</p>
+            </a>
+          </div>
+  
+          <div class="col-md text-center">
+            <a class="splash_nav_item" href="{{ '/essays.html' | relative_url }}">
+              <span class="big-icon">
+                <i class="fas fa-file-alt"></i>
+              </span>
+              <h2>Essays</h2>
+              <p>Read essays on the registers of enslaved Africans.</p>
+            </a>
+          </div>
+
+          <div class="col-md text-center">
+            <a class="splash_nav_item" href="{{ '/images.html' | relative_url }}">
+              <span class="big-icon">
+                <i class="fas fa-image"></i>
+              </span>
+              <h2>Images</h2>
+            <p>View contemporary images to the registers.</p>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
     
     {% include footer.html %}

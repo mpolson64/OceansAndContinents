@@ -6,9 +6,9 @@
 		"_sass/main.scss"
 	],
 	"sourcesContent": [
-		"@import \"main\";\n\n.splash {\n    img {\n        width: 100%;\n    }\n}",
+		"@import \"main\";\n\n.splash_header {\n    img {\n        width: 100%;\n        padding-bottom: 50px;\n    }\n}\n\n.big-icon {\n    font-size: 200px;\n}\n\n.splash_nav_item {\n    color: inherit;\n    text-decoration: none;\n}\n\n.splash_nav_item:hover {\n    color: inherit;\n    text-decoration: none;\n}",
 		"$base-brown: #483400;\n\nh1 {\n    color: white;\n}\n\nh2 {\n    color: $base-brown;\n}"
 	],
 	"names": [],
-	"mappings": "ACEA,AAAA,EAAE,CAAC,EACC,KAAK,EAAE,KAAK,GACf;;AAED,AAAA,EAAE,CAAC,EACC,KAAK,EAPI,OAAO,GAQnB;;ADND,AACI,OADG,CACH,GAAG,CAAC,EACA,KAAK,EAAE,IAAI,GACd"
+	"mappings": "ACEA,AAAA,EAAE,CAAC,EACC,KAAK,EAAE,KAAK,GACf;;AAED,AAAA,EAAE,CAAC,EACC,KAAK,EAPI,OAAO,GAQnB;;ADND,AACI,cADU,CACV,GAAG,CAAC,EACA,KAAK,EAAE,IAAI,EACX,cAAc,EAAE,IAAI,GACvB;;AAGL,AAAA,SAAS,CAAC,EACN,SAAS,EAAE,KAAK,GACnB;;AAED,AAAA,gBAAgB,CAAC,EACb,KAAK,EAAE,OAAO,EACd,eAAe,EAAE,IAAI,GACxB;;AAED,AAAA,gBAAgB,AAAA,MAAM,CAAC,EACnB,KAAK,EAAE,OAAO,EACd,eAAe,EAAE,IAAI,GACxB"
 }
