@@ -15,13 +15,22 @@ The Resilient Digital Humanities Jump-Start Grant is helping provide the opportu
 ### Lead Researchers
 - Daniel B. Domingues da Silva (PI), Rice University
 - Edward Alpers, University of California-Los Angeles
+
 ### Student Researchers
+#### Spring 2020
+- Miles Olson, Website Developer, Rice University, Class of 2020
+
+#### Fall 2019
+- Miles Olson
+
 #### Spring 2019
 - Selase Buatsi, Content Developer, Rice University, Class of 2020
-- Miles Olson, Website Developer, Rice University, Class of 2020
+- Miles Olson
+
 #### Fall 2018
 - Abigail Fields, Content and Database Developer, George Washington University, Class of 2019
 - Aneri Modi, Website Developer, George Washington University, Class of 2020
+
 ### Collaborators
 - Elcício Rui Macuácua, Mozambique History Workshop
 - Ivan Castigo Zacarias, Mozambique History Workshop
@@ -36,7 +45,12 @@ To cite a specific essay within the website using the same citation style, users
 Domingues da Silva, Daniel B. and Abigail Fields, “The 1854 Royal Decree.” Between Oceans and Continents: The Registers of Slave and Freed Africans from Portuguese Mozambique, 2019, africanregisters.org. Accessed January 15, 2019.
 
 ## Conditions and Permissions
-TODO
+
+| Type of Content | Use Restrictions | Citations |
+| ------------- | ------------- | ----- |
+| Data | Historical Data falls under the Public Domain, use restrictions do not apply. | [name of database]. [latest year of publication data]. Between Oceans and Continents: The Registers of Slave and Freed Africans from Mozambique. [website URL] (Accessed [date]) |
+| Images | Contact the institution that provided the digital copy and/or holds the original. | [title provided for digital image]. JPG. Between Oceans and Continents: The Registers of Slave and Freed Africans from Mozambique. [URL] (Accessed [date]) |
+| Texts | All text on the site, including essays, acknowledgements, and descriptions are covered by a Creative Commons Attribution-NonCommercial 4.0 International License | [author of essay]. [title of essay]. [title of website] [publication date of essay]. See How to Cite above for examples. |
 
 ## Acknowledgments
 - The Andrew W. Mellon Foundation
