@@ -6,7 +6,24 @@
   <body>
     {% include navigation.html %}
     {% include header.html %}
-    TODO: IMAGES
+    
+    <div class="container">
+      <div class="row">
+        {% assign sorted = site.gallery | sort: 'index' %}
+        {% for item in sorted %}
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img src={{ item.image_path }} class="card-img-top" alt={{ image.title }}>
+            <div class="card-body">
+              <h5 class="card-title">{{ item.title }}</h5>
+              <p class="card-text">{{ item.description }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
     {% include footer.html %}
   </body>
 </html>

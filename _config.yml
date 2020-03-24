@@ -1,2 +1,4 @@
 exclude:
     - "src/"
+collections:
+    gallery:
