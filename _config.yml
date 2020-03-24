@@ -1,4 +1,9 @@
 exclude:
     - "src/"
+    - "README.md"
+    - "package.json"
+    - "package-lock.json"
+    - "webpack.config.js"
+
 collections:
     gallery:
