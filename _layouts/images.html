@@ -13,7 +13,7 @@
         {% for item in sorted %}
         <div class="col">
           <div class="card border-light" style="width: 18rem;">
-            <img src={{ item.image_path }} class="card-img-top" alt={{ image.title }}>
+            <img src="{{ item.image_path | relative_url }}" class="card-img-top" alt="{{ image.title }}">
             <div class="card-body">
               <h5 class="card-title">{{ item.title }}</h5>
               <p class="card-text">{{ item.description }}</p>
