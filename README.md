@@ -27,4 +27,5 @@ If you would like to instead only build the site replace the final command with 
 
 ## Hosting
  [![Netlify Status](https://api.netlify.com/api/v1/badges/eb3842ff-bdb6-48c2-a208-bd5f9b50405c/deploy-status)](https://app.netlify.com/sites/priceless-allen-285e5f/deploys)
+ 
 Hosted on Netlify for testing purposes.
