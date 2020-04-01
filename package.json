@@ -34,6 +34,7 @@
     "whybundled": "^1.4.2"
   },
   "dependencies": {
+    "bootstrap": "^4.4.1",
     "d3": "^5.9.2",
     "datamaps": "^0.5.9",
     "nouislider": "^13.1.3",

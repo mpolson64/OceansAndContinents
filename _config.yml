@@ -7,3 +7,8 @@ exclude:
 
 collections:
     gallery:
+
+sass:
+    load_paths:
+        - node_modules
+        - assets

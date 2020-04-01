@@ -1,3 +1,5 @@
+@import "bootstrap/scss/bootstrap";
+
 $base-brown: #483400;
 
 h1 {
@@ -7,4 +9,7 @@ h1 {
 h2 {
     color: $base-brown;
 }
-  
+
+p {
+    @extend .text-justify;
+}
