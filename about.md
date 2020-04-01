@@ -53,16 +53,16 @@ Domingues da Silva, Daniel B. and Abigail Fields, “The 1854 Royal Decree.” B
 | Texts | All text on the site, including essays, acknowledgements, and descriptions are covered by a Creative Commons Attribution-NonCommercial 4.0 International License | [author of essay]. [title of essay]. [title of website] [publication date of essay]. See How to Cite above for examples. |
 
 ## Acknowledgments
-- The Andrew W. Mellon Foundation
-- Fondren Library, Rice University
-- The George Washington University
-- Historical Archive of Mozambique
-- Humanities Research Center, Rice University
-- Mozambique History Workshop
-- Resilient Networks for Inclusive Digital Humanities
-- Rice University
-- Stuart A. Rose Manuscript, Archives, & Rare Book Library, Emory University 
-- University Libraries, University of Missouri
+- [The Andrew W. Mellon Foundation](https://mellon.org/)
+- [Fondren Library, Rice University](http://library.rice.edu/)
+- [The George Washington University](https://www.gwu.edu/)
+- [Historical Archive of Mozambique](http://www.ahm.uem.mz/novo/)
+- [Humanities Research Center, Rice University](https://hrc.rice.edu/)
+- [Mozambique History Workshop](https://www.ohmoz.com/index.php?lang=en)
+- [Resilient Networks for Inclusive Digital Humanities](https://resilientdh.org/)
+- [Rice University](https://www.rice.edu/)
+- [Stuart A. Rose Manuscript, Archives, & Rare Book Library, Emory University](https://rose.library.emory.edu/)
+- [University Libraries, University of Missouri](http://library.missouri.edu/about/)
 
 ## Special Thanks
 - Melissa Bailar
