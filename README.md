@@ -26,4 +26,6 @@ This will build the site to the `_site` directoy and serve it at `localhost:4000
 If you would like to instead only build the site replace the final command with `npm run-script build-all`.
 
 ## Hosting
-Hosted on Netlify
+ [![Netlify Status](https://api.netlify.com/api/v1/badges/eb3842ff-bdb6-48c2-a208-bd5f9b50405c/deploy-status)](https://app.netlify.com/sites/priceless-allen-285e5f/deploys)
+ 
+Hosted on Netlify for testing purposes.
