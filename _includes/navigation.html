@@ -4,30 +4,32 @@
 <link rel="stylesheet" href="{{ '/assets/css/navigation.css' | relative_url }}">
 
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-  <a class="navbar-brand" href="{{ '/' | relative_url }}">Oceans and Continents</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a {% if page.title == "Oceans and Continents" %} class="{{active_class}}" {% else %} class="{{inactive_class}}" {% endif %} href="{{ '/' | relative_url }}">Home <span class="sr-only">(current)</span></a>
+  <div class="container">
+    <a class="navbar-brand" href="{{ '/' | relative_url }}">Oceans and Continents</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto">
+        <a {% if page.title == "Oceans and Continents" %} class="{{active_class}}" {% else %} class="{{inactive_class}}" {% endif %} href="{{ '/' | relative_url }}">Home <span class="sr-only">(current)</span></a>
 
-      <li class="nav-item dropdown">
-        <a {% if page.title == "Database" %} class="{{active_class}} dropdown-toggle" {% else %} class="{{ inactive_class }} dropdown-toggle" {% endif %} id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Database
+        <li class="nav-item dropdown">
+          <a {% if page.title == "Database" %} class="{{active_class}} dropdown-toggle" {% else %} class="{{ inactive_class }} dropdown-toggle" {% endif %} id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Database
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="{{ '/database.html' | relative_url }}">Examine the Database</a>
+            <a class="dropdown-item" href="{{ '/understanding_the_database.html' | relative_url }}">Understanding the Database</a>
+          </div>
+        </li>
+
+        <a {% if page.title == "Essays" %} class="{{active_class}}" {% else %} class="{{inactive_class}}" {% endif %} href="{{ '/essays.html' | relative_url }}">Essays</a>
+        <a {% if page.title == "Images" %} class="{{active_class}}" {% else %} class="{{inactive_class}}" {% endif %} href="{{ '/images.html' | relative_url }}">Images</a>
+        <a {% if page.title == "About" %} class="{{active_class}}" {% else %} class="{{inactive_class}}" {% endif %} href="{{ '/about.html' | relative_url }}">About</a>
+        <a class="{{inactive_class}}" href="https://www.facebook.com/Between-Oceans-and-Continents-261710327832413/">
+          <i class="fab fa-facebook"></i>
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="{{ '/database.html' | relative_url }}">Examine the Database</a>
-          <a class="dropdown-item" href="{{ '/understanding_the_database.html' | relative_url }}">Understanding the Database</a>
-        </div>
-      </li>
-
-      <a {% if page.title == "Essays" %} class="{{active_class}}" {% else %} class="{{inactive_class}}" {% endif %} href="{{ '/essays.html' | relative_url }}">Essays</a>
-      <a {% if page.title == "Images" %} class="{{active_class}}" {% else %} class="{{inactive_class}}" {% endif %} href="{{ '/images.html' | relative_url }}">Images</a>
-      <a {% if page.title == "About" %} class="{{active_class}}" {% else %} class="{{inactive_class}}" {% endif %} href="{{ '/about.html' | relative_url }}">About</a>
-      <a class="{{inactive_class}}" href="https://www.facebook.com/Between-Oceans-and-Continents-261710327832413/">
-        <i class="fab fa-facebook"></i>
-      </a>
+      </div>
     </div>
   </div>
 </nav>
