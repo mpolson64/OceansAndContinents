@@ -1,0 +1,28 @@
+---
+---
+@import "main";
+table {
+    @extend .table;
+}
+
+#vizualizers {
+    background-color: white;
+}
+
+.mouseover {
+    color: #fff;
+    border-radius: 5px;
+    background: #684c00;
+    padding: 10px;
+    margin: 10px;
+}
+
+.noUiSlider {
+    margin-right: 25px;
+    margin-top: 37px;
+    width: 60%;
+}
+
+.noUi-connect {
+    background: #684c00;
+}
