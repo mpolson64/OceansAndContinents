@@ -23,6 +23,7 @@ The default variables of the database reproduce the values available in the regi
 - **Occupation** - Shows the occupation of the individuals listed translated into English. Indigenous terms or Portuguese neologisms, like machambeiro,  were recorded as they appear in the documents.
 
 ## Omitted Variables
+These variables are present in the database, and will be accessible if the database is downloaded in its unfiltered form, but for readability were excluded from the interactive database here.
 - **Sequence Numbers** - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
 - **Markings** - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
 - **Observations** - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
