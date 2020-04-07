@@ -15,7 +15,10 @@
           {% for item in sorted %}
           <div class="col">
             <div class="card border-light">
-              <img src="{{ item.image_path | relative_url }}" class="card-img-top" alt="{{ image.title }}">
+              <a href="{{ item.image_path | relative_url }}" data-lightbox="gallery" data-title="{{ item.title }}">
+                <img src="{{ item.image_path | relative_url }}" class="card-img-top" alt="{{ item.title }}">
+              </a>
+              
               <div class="card-body">
                 <h5 class="card-title">{{ item.title }}</h5>
                 <p class="card-text">{{ item.description }}</p>
