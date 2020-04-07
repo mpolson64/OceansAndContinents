@@ -2,6 +2,7 @@
 <html>
   <head>
     {% include head.html %}
+    <link rel="stylesheet" href="/assets/css/lightbox.min.css">
     <link rel="stylesheet" href="{{ '/assets/css/images.css' | relative_url }}">
   </head>
   <body>
@@ -31,5 +32,8 @@
     </div>
 
     {% include footer.html %}
+
+    <!-- Lightbox for images -->
+    <script type="text/javascript" src="/assets/js/lightbox-plus-jquery.min.js"></script>
   </body>
 </html>
