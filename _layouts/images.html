@@ -2,25 +2,28 @@
 <html>
   <head>
     {% include head.html %}
+    <link rel="stylesheet" href="{{ '/assets/css/images.css' | relative_url }}">
   </head>
   <body>
     {% include navigation.html %}
     {% include header.html %}
     
-    <div class="container">
-      <div class="row">
-        {% assign sorted = site.gallery | sort: 'index' %}
-        {% for item in sorted %}
-        <div class="col">
-          <div class="card border-light" style="width: 18rem;">
-            <img src="{{ item.image_path | relative_url }}" class="card-img-top" alt="{{ image.title }}">
-            <div class="card-body">
-              <h5 class="card-title">{{ item.title }}</h5>
-              <p class="card-text">{{ item.description }}</p>
+    <div class="images">
+      <div class="container">
+        <div class="row">
+          {% assign sorted = site.gallery | sort: 'index' %}
+          {% for item in sorted %}
+          <div class="col">
+            <div class="card border-light">
+              <img src="{{ item.image_path | relative_url }}" class="card-img-top" alt="{{ image.title }}">
+              <div class="card-body">
+                <h5 class="card-title">{{ item.title }}</h5>
+                <p class="card-text">{{ item.description }}</p>
+              </div>
             </div>
           </div>
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
     </div>
 
