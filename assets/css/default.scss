@@ -2,6 +2,10 @@
 ---
 @import "main";
 
+img {
+	@extend .img-fluid;
+}
+
 table {
 	margin: 15px;
 }
