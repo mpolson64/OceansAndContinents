@@ -5,7 +5,6 @@
 $font-stack: 'Open Sans Light', sans-serif;
 
 $base-brown: #483400;
-$header-brown: #684c00;
 
 h1 {
     color: white;
@@ -13,7 +12,7 @@ h1 {
 
 h2 {
     @extend .text-center;
-    color: $header-brown;
+    color: $base-brown;
 }
 
 body {
