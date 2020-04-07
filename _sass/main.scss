@@ -1,5 +1,8 @@
 @import "bootstrap/scss/bootstrap";
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+$font-stack: 'Open Sans Light', sans-serif;
 $base-brown: #483400;
 
 h1 {
@@ -10,6 +13,14 @@ h2 {
     color: $base-brown;
 }
 
+body {
+    font: 100% $font-stack;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
 p {
     @extend .text-justify;
+    // line-height: 1.6;
+    // font-weight: 300;
 }
