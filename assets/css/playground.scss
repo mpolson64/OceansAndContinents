@@ -1,20 +1,15 @@
 ---
 ---
 @import "main";
+
 table {
     @extend .table;
 }
 
-#vizualizers {
-    background-color: white;
-}
-
 .mouseover {
-    color: #fff;
-    border-radius: 5px;
-    background: #684c00;
+    color: white;
+    background: $base-brown;
     padding: 10px;
-    margin: 10px;
 }
 
 .noUiSlider {
@@ -24,5 +19,33 @@ table {
 }
 
 .noUi-connect {
-    background: #684c00;
+    background: $base-brown;
+}
+
+.vizSelectMargin {
+    margin: 10px;
+}
+
+#filters {
+    width: 50%;
+    overflow: scroll;
+    transition: 0.5s;
+    float: left;
+}
+
+#vizualizers {
+    width: 50%;
+    overflow: scroll;
+    transition: 0.5s;
+    float: left;
+    background-color: white;
+}
+
+#bar {
+    font-size: 12px;
+}
+
+#splitChart {
+    display: flex;
+    flex-flow: row wrap;
 }
