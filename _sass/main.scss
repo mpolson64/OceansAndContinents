@@ -3,14 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 $font-stack: 'Open Sans Light', sans-serif;
+
 $base-brown: #483400;
+$header-brown: #684c00;
 
 h1 {
     color: white;
 }
 
 h2 {
-    color: $base-brown;
+    @extend .text-center;
+    color: $header-brown;
 }
 
 body {
