@@ -30,3 +30,6 @@ The registers contain identifying information about the slaves, their origins, a
 
 ## Life After Registration
 The registers contain identifying information about the slaves, their origins, and their location of registration. Each slave is registered under their master, who provided the information about them, whether it was correct or not. While their names were included, some of the names were derogatory or “funny” names provided by the masters. The registers also included information about their origins, specifically the city or region they were from as well as the city/region that they were registered in. This information shows the path many of the slaves took from their homes to their places of register. Additionally, the registers also provide information about the slave’s gender as well as occasionally any identifying features, such as scars or birthmarks
+
+## Test New Essay2
+Test text2.
