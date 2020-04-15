@@ -74,3 +74,8 @@ Domingues da Silva, Daniel B. and Abigail Fields, “The 1854 Royal Decree.” B
 - Kelsey Marie Rogers
 - Lisa Spiro
 - Joel das Neves Tembe
+
+## About This Site
+This site is built and maintained by Rice University undergraduate researcher Miles Olson using a combination various modern web technologies. The site's post HTML is generated from plaintext using the static site generator [Jekyll](https://jekyllrb.com/). The database visualizer is written entirely in JavaScript heavily utilizing [D3.js](https://d3js.org/), a JavaScript library for producing dynamic, interactive data visualizations directly in the browser.
+
+The source of this site is open and availible on [Github](https://github.com/mpolson64/OceansAndContinents).
