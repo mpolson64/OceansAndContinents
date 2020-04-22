@@ -80,6 +80,6 @@ This site is built and maintained by Rice University undergraduate researcher Mi
 The site's post HTML is generated from plaintext using the static site generator [Jekyll](https://jekyllrb.com/).
 The database visualizer is written entirely in JavaScript heavily utilizing [D3.js](https://d3js.org/), a JavaScript library for producing dynamic and interactive data visualizations directly in the browser.
 By bringing in this powerful tool more often used in the context of data science, we allow people to explore our extremely rich dataset in a uniquely useful and tactile way.
-Using our interactive vizualizers, we hope users are able to find insightfull connections that would otherwise have been made opaque in the data's original, tabular form.
+Through our interactive vizualizers, we hope users are able to find insightfull connections that would otherwise have been made opaque in the data's original, tabular form.
 
 The source of this site is open and availible on [Github](https://github.com/mpolson64/OceansAndContinents).
