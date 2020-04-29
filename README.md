@@ -8,6 +8,28 @@ With this in mind the repository is structured more or less how one would expect
 However, there are also a number of requisite `npm` and `webpack` configuration files at project root as well.
 When run, it will compile the Javascript rooted at `src/index.js` and output the bundle to `assets/js/bundle.js` where it can be picked up by `jekyll`.
 
+### Getting a Mac ready to run locally and make edits
+A number of command line tools will need to be installed; these instructions will walk you through the commands needed to install everything from a blank machine.
+The first is the Command Line Developer Tools.
+This is already installed on a majority of devices.
+Check to see you have it by running
+```
+git --version
+```
+If something resembling `git version 2.24.1 (Apple Git-126)` is given back to you you're all set, otherwise follow the prompt that will pop up to install the Command Line Developer Tools.
+Now, run each of the following commands sequentially (you may need to restart terminal in between some commands).
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+brew install rbenv
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc 
+rbenv init
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+rbenv install 2.7.0
+rbenv global 2.7.0
+gem install bundler
+brew install node
+```
+
 ### Making Baisc Edits
 1. Edit the `.md` file corresponding to the page you want to change; you can use this [Markdown cheatsheet](https://www.markdownguide.org/cheat-sheet/) if you need.
 2. Open terminal and navigate to the site folder using `cd your/path/to/OceansAndContinents` (you can use **TAB** to autocomplete).
