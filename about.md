@@ -82,4 +82,4 @@ The database visualizer is written entirely in JavaScript heavily utilizing [D3.
 By bringing in this powerful tool more often used in the context of data science, we allow people to explore our extremely rich dataset in a uniquely useful and tactile way.
 Through our interactive vizualizers, we hope users are able to find insightfull connections that would otherwise have been made opaque in the data's original, tabular form.
 
-The source of this site is open and availible on [Github](https://github.com/mpolson64/OceansAndContinents).
+The source of this site is open and availible on [Github](https://github.com/danibds/OceansAndContinents).
