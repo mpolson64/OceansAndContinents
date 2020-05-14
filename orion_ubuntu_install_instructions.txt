@@ -1,0 +1,35 @@
+sudo apt-get update
+sudo apt-get install build-essential
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
+
+brew install rbenv
+rbenv init
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+
+sudo apt-get install -y zlib1g-dev
+
+RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl)" rbenv install 2.7.0
+
+rbenv global 2.7.0
+sudo gem install bundler
+brew install node
+
+sudo apt install ruby-dev 
+sudo gem install eventmachine
+
+bundle install
+npm install
+npm run-script build-all
+
+#SUCCESS!
+
+#then you can install apache2 and move the site files over to the web directory
+sudo bash
+apt-get install apache2
+service apache2 start
+cp -r /home/{USERNAME}/OceansAndContinents/_site/* /var/www
+
+#now put the security settings in place
